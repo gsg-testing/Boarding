@@ -109,45 +109,123 @@ tr:nth-child(even) {
     }
     </style>
     <!-- ^ ICON TEXT ^ -->
+    <!-- TABS -->
+    <style>
+        body {font-family: Arial;}
+        
+        /* Style the tab */
+        .tab {
+          overflow: hidden;
+          border: 1px solid #ccc;
+          background-color: #f1f1f1;
+        }
+        
+        /* Style the buttons inside the tab */
+        .tab button {
+          background-color: inherit;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          font-size: 17px;
+        }
+        
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+        
+        /* Create an active/current tablink class */
+        .tab button.active {
+          background-color: #ccc;
+        }
+        
+        /* Style the tab content */
+        .tabcontent {
+          display: none;
+          padding: 6px 12px;
+          border: 1px solid #ccc;
+          border-top: none;
+        }
+    </style>
+    <!-- ^ TABS ^-->
 </head>
 </head>
 <body>
 
 <h1>Currently Gated Students</h1>
 <p>These are the students who are gated right now.</p>
-<h3>Colour Gide</h3>
-<table>
-    <tr>
-      <th>Colour</th>
-      <th>Status</th>
-      <th>Definition</th>
-    </tr>
-    <tr>
-      <td>Orange</td>
-      <td>Starting</td>
-      <td>Gate has been started within the past 48 hours.</td>
-    </tr>
-    <tr>
-        <td>Red</td>
-        <td>Current</td>
-        <td>Gate is currently ative - Boarder is on the watch!</td>
-      </tr>
-    <tr>
-      <td>Yellow</td>
-      <td>Nearly Finished</td>
-      <td>Gate is going to end within the next 48 hours.</td>
-    </tr>
-    <tr>
-        <td>Green</td>
-        <td>Ending</td>
-        <td>Gate is going to end today.</td>
-    </tr>
-    <tr>
-        <td>Blue</td>
-        <td>Ended - On the Watch</td>
-        <td>Gate has ended - Boarder is on the watch!</td>
-    </tr>
-  </table>
+<h3>Colour Guide</h3>
+<!-- TABS -->
+<div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'About')">About</button>
+    <button class="tablinks" onclick="openCity(event, 'Table')">Table</button>
+    <button class="tablinks" onclick="openCity(event, 'Hide')">Hide Info</button>
+  </div>
+  
+  <div id="About" class="tabcontent">
+    <h3>About</h3>
+    <p>INFO ABOUT COLOUR</p>
+  </div>
+  
+  <div id="Table" class="tabcontent">
+    <h3>Table</h3>
+    <table>
+        <tr>
+          <th>Colour</th>
+          <th>Status</th>
+          <th>Definition</th>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>Starting</td>
+          <td>Gate has been started within the past 48 hours.</td>
+        </tr>
+        <tr>
+            <td>Red</td>
+            <td>Current</td>
+            <td>Gate is currently ative - Boarder is on the watch!</td>
+          </tr>
+        <tr>
+          <td>Yellow</td>
+          <td>Nearly Finished</td>
+          <td>Gate is going to end within the next 48 hours.</td>
+        </tr>
+        <tr>
+            <td>Green</td>
+            <td>Ending</td>
+            <td>Gate is going to end today.</td>
+        </tr>
+        <tr>
+            <td>Blue</td>
+            <td>Ended - On the Watch</td>
+            <td>Gate has ended - Boarder is on the watch!</td>
+        </tr>
+      </table>
+  </div>
+  
+  <div id="Hide" class="tabcontent">
+  </div>
+
+  <script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  </script>
+<!-- ^ TABS ^ -->
+
 
 <h2>Suspended Boarders</h2>
 <!-- TEST BOARDER -->
