@@ -1,12 +1,168 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Info Board</title>
+<title>Gated Students</title>
+
+<!-- TABLE -->
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- ^ TABLE ^ -->
+
+<!-- ICON IMAGE -->
+<style>
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: red;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.icon {
+  color: white;
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.fa-user:hover {
+  color: #eee;
+}
+</style>
+<!-- ^ ICON IMAGE ^-->
+
+<!-- ICON TEXT -->
+<style>
+    * {box-sizing: border-box;}
+    
+    .container {
+      position: relative;
+      width: 50%;
+      max-width: 300px;
+    }
+    
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    
+    .overlay {
+      position: absolute; 
+      bottom: 0; 
+      background: rgb(255, 0, 0);
+      background: rgba(255, 0, 0, 0.5);
+      color: #f1f1f1; 
+      width: 100%;
+      transition: .5s ease;
+      opacity:0;
+      color: white;
+      font-size: 20px;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .container:hover .overlay {
+      opacity: 1;
+    }
+    </style>
+    <!-- ^ ICON TEXT ^ -->
+</head>
 </head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+<h1>Currently Gated Students</h1>
+<p>These are the students who are gated right now.</p>
+<h3>Colour Gide</h3>
+<table>
+    <tr>
+      <th>Colour</th>
+      <th>Status</th>
+      <th>Definition</th>
+    </tr>
+    <tr>
+      <td>Orange</td>
+      <td>Starting</td>
+      <td>Gate has been started within the past 48 hours.</td>
+    </tr>
+    <tr>
+        <td>Red</td>
+        <td>Current</td>
+        <td>Gate is currently ative - Boarder is on the watch!</td>
+      </tr>
+    <tr>
+      <td>Yellow</td>
+      <td>Nearly Finished</td>
+      <td>Gate is going to end within the next 48 hours.</td>
+    </tr>
+    <tr>
+        <td>Green</td>
+        <td>Ending</td>
+        <td>Gate is going to end today.</td>
+    </tr>
+    <tr>
+        <td>Blue</td>
+        <td>Ended - On the Watch</td>
+        <td>Gate has ended - Boarder is on the watch!</td>
+    </tr>
+  </table>
+
+<h2>Suspended Boarders</h2>
+<!-- TEST BOARDER -->
+
+<div class="container">
+  <img src="img_avatar.png" alt="Avatar" class="image">
+  <div class="overlay">
+    <a href="#" class="icon" title="User Profile">
+      <i class="fa fa-user"></i>
+    </a>
+  </div>
+  <div class="overlay">John Bloggs</div>
+</div>
+
+
 
 </body>
 </html>
