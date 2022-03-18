@@ -187,15 +187,49 @@ tr:nth-child(even) {
         }
     </style>
     <!-- ^ TABS ^-->
+    <!-- ALERTS -->
+<style>
+  .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+  </style>
+<!-- ^ ALERTS ^ -->
 </head>
 </head>
 <body>
 
+  <div class="alert"> 
+    <strong>UPCOMING COVID UPDATE:</strong> Students are to wear masks in their OWN house. (Starting Staturday)
+  </div> 
+  <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    <strong>NEW COVID UPDATES!</strong> Click the "GSG COVID UPDATES" button the the right to view upto date COVID Updates by Great Southern Grammar
+  </div> 
+
   <div class="navbar">
-    <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+    <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
     <a href="gated.html"><i class="fa fa-fw fa-lock"></i> Gate</a> 
     <a href="students.html"><i class="fa fa-fw fa-user"></i> Students</a> 
   </div>
+
+
 
 <h1>Currently Gated Students</h1>
 <p>These are the students who are gated right now.</p>
