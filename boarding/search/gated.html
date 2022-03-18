@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 <html>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
 <title>Gated Students</title>
 
-<!-- TABLE -->
+<!-- NAV -->
 <style>
+  body {font-family: Arial, Helvetica, sans-serif;}
+  
+  .navbar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+  }
+  
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background-color: #000;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
+  </style>
+<!-- ^ NAV ^ -->
+<!-- TABLE -->
+<style> 
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -155,6 +191,12 @@ tr:nth-child(even) {
 </head>
 <body>
 
+  <div class="navbar">
+    <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+    <a href="gated.html"><i class="fa fa-fw fa-lock"></i> Gate</a> 
+    <a href="students.html"><i class="fa fa-fw fa-user"></i> Students</a> 
+  </div>
+
 <h1>Currently Gated Students</h1>
 <p>These are the students who are gated right now.</p>
 <h3>Colour Guide</h3>
@@ -248,6 +290,17 @@ tr:nth-child(even) {
     </a>
   </div>
   <div class="overlay">Jack Lange</div>
+</div>
+
+<!-- MADI BEECK -->
+<div class="container">
+  <img src="images/students/madiB-end.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <a href="#" class="icon" title="User Profile">
+      <i class="fa fa-user"></i>
+    </a>
+  </div>
+  <div class="overlay">Madison Beeck</div>
 </div>
 
 </body>
