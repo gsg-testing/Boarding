@@ -3,6 +3,9 @@
 Boarding at Great Southern Grammar is currently is managed and controled by [Reach Boarding Systems](https://gsg.reachboarding.com.au).
 Reach Boarding is an easy to manage tool designed for Boarding schools but it is bland and hard to navagate, specially for new/exisiting parents, staff and students. It is also hard to set up and takes alot of time to get stuff you need. This portal is designed pesificaly for Great Southern Grammar and its needs.
 
+## PRIVACY
+If you wish to view our privacy policy, [click here](https://github.com/gsg-testing/Boarding/blob/main/privacy.md).
+
 # ❓ Purpose
 Great Southern Grammar (GSG) needs to manage and control staff, students, parents, builidngs, events and alot more in an easy to use, simple, designated, customised system.
 
